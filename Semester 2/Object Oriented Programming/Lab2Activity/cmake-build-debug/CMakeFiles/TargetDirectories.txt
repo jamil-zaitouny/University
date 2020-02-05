@@ -1,0 +1,3 @@
+C:/Users/Jamil/Desktop/University/Homeworks/OOP/Lab2Activity/cmake-build-debug/CMakeFiles/Lab2Activity.dir
+C:/Users/Jamil/Desktop/University/Homeworks/OOP/Lab2Activity/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Jamil/Desktop/University/Homeworks/OOP/Lab2Activity/cmake-build-debug/CMakeFiles/rebuild_cache.dir
