@@ -16,5 +16,5 @@
 - [Computer Networks]( "")
 
 :link: Quicklinks
-- [Event Management App]( "")
-- [Toy Language Interperter]( "")
+- [Event Management App (C++/QT)]( "")
+- [Toy Language Interperter (Java/JavaFX)]( "")
