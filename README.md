@@ -16,5 +16,5 @@
 - [Computer Networks]( "")
 
 :link: Quicklinks
-- [Event Management App (C++/QT)]( "https://github.com/jamil-zaitouny/University/tree/master/Semester%202/Object%20Oriented%20Programming/EventManagementSystemFinal")
+- [Event Management App (C++/QT)](https://github.com/jamil-zaitouny/University/tree/master/Semester%202/Object%20Oriented%20Programming/EventManagementSystemFinal)
 - [Toy Language Interperter (Java/JavaFX)]( "")
