@@ -15,4 +15,6 @@
 - [Functional and Logic Programming]( "")
 - [Computer Networks]( "")
 
-
+:link: Quicklinks
+- [Event Management App]( "")
+- [Toy Language Interperter]( "")
