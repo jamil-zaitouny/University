@@ -1,0 +1,13 @@
+ADT Bag
+//returns the Telem with the greatest frequence from teh bag(if there are multiple elementst with the same maximum frequence
+any one of them can be returned)
+//if the bag is empty it returns NULL_TELEM
+TElem mostFrequent() const;
+
+Obs In order to have a NULL_TELEM, add to the beginning of teh BAG.h file the following instruction
+#define NULL_TELEM 0
+ADT Bag
+
+//returns teh number of elemnents that appear a frequence times
+//throws an excpetion if frequence is negative or zero
+in elmentsWithThisFrequence(int frequence) const;

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="Lab1_Final" targetName="Lab1_Final" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2540f5bf-0abd-44f1-bb65-20f511603061" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>bag::iter</find>
+      <find>bag</find>
+      <find>excep</find>
+      <find>nrocc</find>
+      <find>vec</find>
+      <find>capacity</find>
+      <find>NULL</find>
+      <find>ptr</find>
+      <find>bag::add</find>
+      <find>for</find>
+      <find>c</find>
+      <find>cap</find>
+      <find>size</find>
+      <find>remove</find>
+      <find>&lt;=</find>
+      <find>nroccur</find>
+      <find>ca</find>
+      <find>print</find>
+      <find>bla</find>
+      <find>valid</find>
+      <find>cout</find>
+      <find>first</find>
+      <find>c.</find>
+      <find>minimum</find>
+      <find>maximum</find>
+      <find>add</find>
+      <find>ad</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectId" id="1XOmEs6neTveve5QMlrD6O7aZgb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Lab1_Final" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Lab1_Final" TARGET_NAME="Lab1_Final" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Lab1_Final" RUN_TARGET_NAME="Lab1_Final">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2540f5bf-0abd-44f1-bb65-20f511603061" name="Default Changelist" comment="" />
+      <created>1554293019176</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554293019176</updated>
+      <workItem from="1554293021534" duration="15470000" />
+      <workItem from="1554456454093" duration="7059000" />
+      <workItem from="1554475250209" duration="875000" />
+      <workItem from="1554637527012" duration="652000" />
+      <workItem from="1555078895682" duration="1700000" />
+      <workItem from="1555297362197" duration="866000" />
+      <workItem from="1555299627923" duration="703000" />
+      <workItem from="1555309915343" duration="893000" />
+      <workItem from="1555319739810" duration="2536000" />
+      <workItem from="1555353120661" duration="4000" />
+      <workItem from="1580925411016" duration="29000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
