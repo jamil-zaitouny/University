@@ -1,0 +1,47 @@
+     1                                  ;Being given a string of doublewords, build another string of doublewords which will include only the doublewords from the given string which have an ;even number of bits with the value 1.
+     2                                  bits 32
+     3                                  global start
+     4                                  extern exit
+     5                                  import exit msvcrt.dll
+     6                                  segment data use32 class=data
+     7 00000000 980100000000000034-         stringofdw dd 00000198h,00000000h,0FFF88934h,0F567893h,76856434h ;only FFF88934h will be excluded
+     7 00000009 89F8FF9378560F3464-
+     7 00000012 8576               
+     8                                      l equ ($-stringofdw)/4
+     9 00000014 00                          counting db 0    
+    10 00000015 00000000<rept>              newstring times l dd 0 
+    11 00000029 02000000                    two dd 2
+    12                                  segment code use32 class=code
+    13                                  start:
+    14 00000000 B905000000                  mov ecx, l
+    15 00000005 BE[00000000]                mov esi, stringofdw  ;set for esi the starting address of stringofdw
+    16 0000000A BF[15000000]                mov edi, newstring ; set for edi the starting address of newstring
+    17 0000000F FC                          cld ; we are going from left to right (DF=0)
+    18 00000010 E340                        jecxZ ending
+    19                                      
+    20                                      repeat1:
+    21 00000012 AD                              lodsd ;load each dw into eax
+    22 00000013 89C3                            mov ebx,eax ; we need to have a copy of eax which we will keep in ebx
+    23 00000015 C605[14000000]00                mov byte[counting],0; set the counter of 1 in the doubleword to zero
+    24                                          
+    25                                          repeat2:;while eax is not zero after the division by two we will continue 
+    26 0000001C BA00000000                          mov edx,0
+    27 00000021 F735[29000000]                      div dword[two]
+    28 00000027 83FA01                              cmp edx,1; if the remainder from the division of eax is equal to 1 we found an 1 in the representation of eax 
+    29 0000002A 7507                                jnZ skip ; if we found an one we count it 
+    30 0000002C 8005[14000000]01                    add byte[counting],1
+    31                                              skip:
+    32 00000033 83F800                              cmp eax,0 
+    33 00000036 75E4                                jnZ repeat2 ; if eax is 0 we break the loop if not we continue
+    34 00000038 B800000000                      mov eax,0
+    35 0000003D A0[14000000]                    mov al,[counting];we try to see if the number of 1's in the represantion is an even number
+    36 00000042 F735[29000000]                  div dword[two]
+    37 00000048 83FA00                          cmp edx,0
+    38 0000004B 7503                            jnZ skip3 ; if the remainder is equal to 0 it means we have an even number of 1's and we have to put the new in newstring
+    39 0000004D 89D8                            mov eax,ebx
+    40 0000004F AB                              stosd
+    41                                          skip3:
+    42 00000050 E2C0                            loop repeat1 ;while ecx-1 is not equal to zero repeat
+    43                                      ending:
+    44 00000052 6A00                            push dword 0
+    45 00000054 FF15[00000000]                  call [exit]
