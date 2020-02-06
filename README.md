@@ -12,7 +12,7 @@
 - [Advanced Programming Methods](https://github.com/jamil-zaitouny/University/tree/master/Semester%203/Advanced%20Programming%20Methods)
 - [Databases]( "")
 - [Functional and Logic Programming](https://github.com/jamil-zaitouny/University/tree/master/Semester%203/Functional%20and%20Logic%20Programming)
-- [Computer Networks](https://github.com/jamil-zaitouny/University/tree/master/Semester%203/Functional%20and%20Logic%20Programming)
+- [Computer Networks](https://github.com/jamil-zaitouny/University/tree/master/Semester%203/Computer%20Networks/PacketTracer)
 
 :link: Quicklinks
 - [Event Management App (C++/QT)](https://github.com/jamil-zaitouny/University/tree/master/Semester%202/Object%20Oriented%20Programming/EventManagementSystemFinal)
