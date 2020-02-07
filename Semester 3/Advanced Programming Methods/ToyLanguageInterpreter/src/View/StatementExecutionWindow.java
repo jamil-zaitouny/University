@@ -27,39 +27,39 @@ import java.util.ArrayList;
 public class StatementExecutionWindow {
     IStatement statement;
     @FXML
-    ListView<String> prgView;
+    ListView<String> programView;
     @FXML
-    ListView<String> exeStackView;
+    ListView<String> executionStackView;
     @FXML
     ListView<String> outView;
     @FXML
-    ListView<String> fileTblView;
+    ListView<String> fileTableView;
     @FXML
     TableView<HeapObject> heapView;
     @FXML
-    TableColumn<HeapObject, Integer> heapAddr;
+    TableColumn<HeapObject, Integer> heapAddress;
     @FXML
     TableColumn<HeapObject, IValue> heapValue;
     @FXML
-    TableView<SymbolTableObject> symTblView;
+    TableView<SymbolTableObject> symbolTableView;
     @FXML
-    TableColumn<SymbolTableObject, String> symName;
+    TableColumn<SymbolTableObject, String> symbolName;
     @FXML
-    TableColumn<SymbolTableObject, IValue> symValue;
+    TableColumn<SymbolTableObject, IValue> symbolValue;
     @FXML
     Label statementName;
     @FXML
-    Label numberPageStates;
+    Label numberProgramStates;
     @FXML
     Button runButton;
 
 
-    MyIDictionary<String, IValue> symTbl;
+    MyIDictionary<String, IValue> symbolTable;
     MyIHeap heap;
     MyIStack<IStatement> executionStack;
     MyIList<IValue> out;
     MyIFileTable<StringValue, BufferedReader> fileTable;
-    ArrayList<Integer> prgListIds;
+    ArrayList<Integer> programListIDs;
     private Controller controller;
     int size;
 
@@ -76,7 +76,7 @@ public class StatementExecutionWindow {
         repo.addState(state);
         controller= new Controller(repo);
         initPrgState();
-        prgView.getSelectionModel().selectFirst();
+        programView.getSelectionModel().selectFirst();
         runButton.setOnMouseClicked(event -> {
             try {
                 if(controller.oneStepGUI()) {
@@ -89,12 +89,12 @@ public class StatementExecutionWindow {
                 exp.printStackTrace();
             }
         });
-        prgView.setOnMouseClicked(event -> setAll());
-        heapAddr.setCellValueFactory(new PropertyValueFactory<>("Address"));
+        programView.setOnMouseClicked(event -> setAll());
+        heapAddress.setCellValueFactory(new PropertyValueFactory<>("Address"));
         heapValue.setCellValueFactory(new PropertyValueFactory<>("Value"));
 
-        symName.setCellValueFactory(new PropertyValueFactory<>("Name"));
-        symValue.setCellValueFactory(new PropertyValueFactory<>("Value"));
+        symbolName.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        symbolValue.setCellValueFactory(new PropertyValueFactory<>("Value"));
 
 
         setAll();
@@ -103,24 +103,24 @@ public class StatementExecutionWindow {
     public void initPrgState()
     {
         ObservableList<String> prgListId = FXCollections.observableArrayList();
-        prgListIds = (ArrayList<Integer>) controller.getIdList();
+        programListIDs = (ArrayList<Integer>) controller.getIdList();
 
-        for(int id : prgListIds)
+        for(int id : programListIDs)
             prgListId.add(String.valueOf(id));
 
-        prgView.setItems(prgListId);
-        numberPageStates.setText("No of Prg States: "+ String.valueOf(prgListIds.size()));
+        programView.setItems(prgListId);
+        numberProgramStates.setText("No of Prg States: "+ String.valueOf(programListIDs.size()));
         if(size != prgListId.size())
         {
-            prgView.getSelectionModel().selectFirst();
+            programView.getSelectionModel().selectFirst();
             size = prgListId.size();
         }
     }
 
     public void setAll()
     {
-        ProgramState state = controller.getProgramStateByID(Integer.parseInt(prgView.getSelectionModel().getSelectedItem()));
-        symTbl = state.getSymbolTable();
+        ProgramState state = controller.getProgramStateByID(Integer.parseInt(programView.getSelectionModel().getSelectedItem()));
+        symbolTable = state.getSymbolTable();
         executionStack= state.getExecutionStack();
         heap = state.getHeap();
         out = state.getOutput();
@@ -133,7 +133,7 @@ public class StatementExecutionWindow {
             exeStackObs.add(executionStack.getAll().get(index).toString());
             index--;
         }
-        exeStackView.setItems(exeStackObs);
+        executionStackView.setItems(exeStackObs);
 
         ObservableList<String> outObs = FXCollections.observableArrayList();
         for(IValue v : out.getAll())
@@ -143,7 +143,7 @@ public class StatementExecutionWindow {
         ObservableList<String> fileObs = FXCollections.observableArrayList();
         for(StringValue sv : fileTable.getAll().keySet())
             fileObs.add(sv.toString());
-        fileTblView.setItems(fileObs);
+        fileTableView.setItems(fileObs);
 
         ObservableList<HeapObject> heapObs = FXCollections.observableArrayList();
         for(int key : heap.getAll().keySet())
@@ -151,9 +151,9 @@ public class StatementExecutionWindow {
         heapView.setItems(heapObs);
 
         ObservableList<SymbolTableObject> symTblObs = FXCollections.observableArrayList();
-        for(String name : symTbl.getAll().keySet())
-            symTblObs.add(new SymbolTableObject(name, symTbl.lookup(name)));
-        symTblView.setItems(symTblObs);
+        for(String name : symbolTable.getAll().keySet())
+            symTblObs.add(new SymbolTableObject(name, symbolTable.lookup(name)));
+        symbolTableView.setItems(symTblObs);
     }
 
 }

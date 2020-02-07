@@ -8,7 +8,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.SelectionWindowCtrl">
     <children>
-        <ListView fx:id="stmtString" layoutX="79.0" layoutY="83.0" prefHeight="300.0" prefWidth="487.0" />
+        <ListView fx:id="statementString" layoutX="79.0" layoutY="83.0" prefHeight="300.0" prefWidth="487.0" />
         <Label layoutX="89.0" layoutY="14.0" text="Examples" textFill="#f5c117">
             <font>
                 <Font size="46.0" />

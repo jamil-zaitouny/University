@@ -40,7 +40,7 @@ public class Repository implements IRepository {
 
     @Override
     public List<ProgramState> getProgramList() {
-        return null;
+        return states;
     }
 
     @Override
@@ -50,12 +50,21 @@ public class Repository implements IRepository {
 
     @Override
     public List<Integer> getListOfIds() {
-        return null;
+        List<Integer> IDs = new ArrayList<>();;
+        for(ProgramState state: states){
+            IDs.add(state.getProgramID());
+        }
+        return IDs;
     }
 
 
     @Override
     public ProgramState getProgramStateByID(int ID) {
+        for(ProgramState state: states){
+            if(state.getProgramID() == ID){
+                return state;
+            }
+        }
         return null;
     }
 }

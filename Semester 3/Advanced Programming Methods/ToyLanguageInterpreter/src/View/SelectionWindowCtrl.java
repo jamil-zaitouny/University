@@ -33,7 +33,7 @@ import java.util.List;
 public class SelectionWindowCtrl {
 
     @FXML
-    ListView<String> stmtString;
+    ListView<String> statementString;
 
     List<IStatement> stmtList = new ArrayList<>();
 
@@ -162,20 +162,20 @@ public class SelectionWindowCtrl {
         {
             observableList.add(st.toString());
         }
-        stmtString.setItems(observableList);
-        stmtString.getSelectionModel().selectFirst();
+        statementString.setItems(observableList);
+        statementString.getSelectionModel().selectFirst();
 
     }
 
     @FXML
     public void executeButton(Event evt) throws IOException {
-        IStatement stmt = stmtList.get(stmtString.getSelectionModel().getSelectedIndex());
+        IStatement stmt = stmtList.get(statementString.getSelectionModel().getSelectedIndex());
 
         try {
             stmt.typeCheck(new MyDictionary<>());
 
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("StatementExecutionWindow.fxml"));
+            loader.setLocation(getClass().getResource("/View/StatementExecutionWindow.fxml"));
             loader.setController(new StatementExecutionWindow(stmt));
             Stage stage = new Stage();
             Parent root = loader.load();
